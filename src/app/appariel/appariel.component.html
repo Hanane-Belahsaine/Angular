@@ -1,0 +1,30 @@
+
+
+<li [ngClass]="{'list-group-item' : true,
+  'list-group-item-success' : StatutAppariel ==='Allumée',
+   'list-group-item-danger': StatutAppariel === 'Etient' }">
+  
+
+  <div style="height:15px ; width:15px ; background-color:red;"
+       *ngIf="StatutAppariel==='Etient'"></div>
+
+  <div style="height:15px ; width:15px ; background-color:green;"
+       *ngIf="StatutAppariel==='Allumée'"></div>
+
+  <h4>Appariel = {{ NameAppariel }}  </h4> <!--Statut-2 = {{ getStatut() }}-->
+  <h4 [ngStyle]="{color : getColor()}">--Statut-1 = {{ StatutAppariel }}</h4>
+
+  <input type="text" class="form-control" [(ngModel)]="NameAppariel" />
+  <a [routerLink]="[id]">Détail</a><br />
+  <button class="btn btn-success"
+          (click)="onswitchOne()"
+          [disabled]="StatutAppariel==='Allumée'">
+    on
+  </button>
+  <button class="btn btn-danger"
+          (click)="offswitchOne()"
+          [disabled]="StatutAppariel==='Etient'">
+    off
+  </button>
+
+</li>

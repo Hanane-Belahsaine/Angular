@@ -1,0 +1,18 @@
+<h2 align="left">Mes Appariels : </h2>
+<div class="col">
+  <p> Mise a jour : {{ lastUpdate | async |date: 'short'  }} </p>
+  <ul class="liste-group">
+    <app-appariel *ngFor="let appariel of Appariels; let i = index"
+                  [IndexOfAppariel]="i"
+                  [NameAppariel]="appariel.Name"
+                  [StatutAppariel]="appariel.Statut"
+                  [id]="appariel.id"></app-appariel>
+    <!--><app-appariel [NameAppariel]="AppName1" [StatutAppariel]="StatutAppariel1"></app-appariel> -->
+    <!--<app-appariel [NameAppariel]="AppName2" [StatutAppariel]="StatutAppariel2"></app-appariel> -->
+  </ul>
+  <button class="btn btn-success"
+          (click)="OnAllume()">On </button>
+
+  <button class="btn btn-danger"
+          (click)="OnEtient()"> Off</button>
+</div>

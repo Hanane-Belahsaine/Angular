@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\appariel",
+    "\\src\\app\\appariel-view",
+    "\\src\\app\\auth",
+    "\\src\\app\\four-oh-four",
+    "\\src\\app\\services",
+    "\\src\\app\\single-appariel"
+  ],
+  "SelectedNode": "\\src\\app\\app.component.ts",
+  "PreviewInSolutionExplorer": false
+}
